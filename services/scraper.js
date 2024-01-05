@@ -14,6 +14,8 @@ const getHTMLCalendar = async (year) => {
     });
     if (!response.ok) {
         console.log(response);
+        console.log('========================================');
+        console.log(response.headers);
         throw new Error(`An error has occured: ${response.status}`);
     }
     const text = await response.text();
