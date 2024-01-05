@@ -13,6 +13,7 @@ const getHTMLCalendar = async (year) => {
         }
     });
     if (!response.ok) {
+        console.log(response.message);
         throw new Error(`An error has occured: ${response.status}`);
     }
     const text = await response.text();
