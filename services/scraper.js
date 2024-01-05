@@ -7,7 +7,11 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const getHTMLCalendar = async (year) => {
-    const response = await fetch(`https://publicholidays.co.id/id/${year}-dates/`);
+    const response = await fetch(`https://publicholidays.co.id/id/${year}-dates/`, {
+        headers: {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36",
+        }
+    });
     if (!response.ok) {
         throw new Error(`An error has occured: ${response.status}`);
     }
