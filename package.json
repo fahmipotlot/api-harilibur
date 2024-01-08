@@ -8,7 +8,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scrape": "node services/scraper.js"
+    "scrape": "node services/scraper.js",
+    "puppet": "node services/1.js"
   },
   "repository": {
     "type": "git",
@@ -27,5 +28,10 @@
   "devDependencies": {
     "linkedom": "^0.15.1",
     "vite": "^4.4.4"
+  },
+  "dependencies": {
+    "puppeteer": "^21.7.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
   }
 }
