@@ -9,8 +9,8 @@ import userAgent from 'user-agents';
     await page.setUserAgent(userAgent.random().toString())
     await page.setJavaScriptEnabled(true);
   
-    // await page.goto('https://publicholidays.co.id/id/2024-dates/');
-    await page.goto('https://www.g2.com/');
+    await page.goto('https://publicholidays.co.id/id/2024-dates/');
+    // await page.goto('https://www.g2.com/');
     await page.screenshot({path: 'out.png'});
   
     const html = await page.content();
